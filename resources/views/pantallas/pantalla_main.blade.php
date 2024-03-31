@@ -44,7 +44,7 @@
                             reproducirSonido();
 
                             setTimeout(function() {
-                                var texto = element.nombres +" "+ element.lugar; 
+                                var texto = element.nombres + " " +element.apellidos +" "+ element.lugar; 
                                 //Emitiendo voz
                                 var synthesis = new SpeechSynthesisUtterance(texto);
                                 
