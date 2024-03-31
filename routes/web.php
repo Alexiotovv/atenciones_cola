@@ -42,6 +42,7 @@ Route::get('/pantallas/desactivar_voz/{id}', [AtencionesController::class,'desac
 Route::get('/pantallas/activar_voz/{id}', [AtencionesController::class,'activar_voz'])->name('activar.voz');
 
 
+
 //Pantallas
 Route::post('/pantallas/update', [PantallasController::class,'update'])->name('pantallas.update');
 Route::get('/pantallas/index', [PantallasController::class,'index'])->name('pantallas.index');
