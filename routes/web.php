@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AtencionesController;
 use App\Http\Controllers\PantallasController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +22,7 @@ Route::get('/',function(){
     return view('login');
 })->name('credentials');
 
-Route::get('home/', [HomesController::class, 'index'])->name('home');
+Route::get('home/', [HomeController::class, 'index'])->name('home');
 
 //Register and Login user
 Route::post('/login', [AuthController::class, 'login'])->name('login');
