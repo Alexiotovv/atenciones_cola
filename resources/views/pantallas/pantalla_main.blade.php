@@ -1,9 +1,14 @@
 @extends('bases.pantalla')
 @section('pantalla_contenido')
     <div class="card">
-        <video width="100%" height="650px" controls autoplay>
-            <source src="{{asset('storage/recursos/'.$pantalla[0]->recurso)}}" type="video/mp4">
-        </video>
+        @if ($pantalla[0]->tipo=='video')
+            <video width="100%" height="650px" controls autoplay>
+                <source src="{{asset('storage/recursos/'.$pantalla[0]->recurso)}}" type="video/mp4">
+            </video>
+        @elseif ($pantalla[0]->tipo=='imagen')
+            <img src="{{asset('storage/recursos/'.$pantalla[0]->recurso)}}" style="width: 100%; height: 650px;" alt="Imagen">
+
+        @endif
         
         <div class="row" id="content_paciente">
 
