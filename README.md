@@ -5,3 +5,7 @@ php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServicePro
 
 php artisan jwt:secret
 
+
+
+Habilitar Storage:
+php artisan storage:link
